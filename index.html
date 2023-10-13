@@ -11,7 +11,10 @@
     <title>Ethan Borg's Website</title>
     <link rel="stylesheet" href="main.css" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta
       name="description"
       content="This is the personal website of Ethan Borg. A third year computer science student at Western University."
@@ -19,30 +22,49 @@
   </head>
 
   <body>
-    <div class="header">
-      <div class="title">Ethan Borg</div>
-      <a href="index.html">Home</a>
-      <a href="hobbies.html">Hobbies</a>
-      <a href="schoolwork.html">School Work</a>
+    <div id="header">
+      <div class="content">
+        <div id="title">Ethan Borg</div>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About Me</a>
+      </div>
     </div>
-
-    <div class="content">
-      <div class="homepicture">
-        <img src="Images/CasualPicture.jpg" />
-      </div>
-      <div class="opener">
-        <h1>Ethan Borg's Personal Website</h1>
-      </div>
-      <div class="about">
-        <p>
-          I am Ethan Borg, a third year computer science student at Western
-          University. <br />This is the personal website I have created for my
-          work portfolio and personal life. <br />This webiste is my first
-          attempt at front-end development and was created using HTML and CSS.
-          <br />Everything learned to create this site was self-taught from
-          sources such as YouTube and other coding websites.<br /><br />Thank
-          you for visiting, I appreciate the time taken to read about me!
-        </p>
+    <div id="page" style>
+      <div id="fragment">
+        <div class="block">
+          <div id="outerGradient">
+            <div class="content">
+              <div id="innerGradient">
+                <div id="introduction">
+                  <div>&nbsp;</div>
+                  <div id="opener">Ethan Borg's Website</div>
+                  <div id="about">
+                    Hello! I am Ethan Borg, a fourth year computer science
+                    student at The University of Western Ontario.
+                    <br />
+                    This is the personal website I have created for my work
+                    portfolio and personal life.
+                    <br />
+                    This webiste is my first attempt at front-end development
+                    and was created using HTML and CSS.
+                    <br />
+                    Thank you for visiting and taking the time to read about me!
+                  </div>
+                  <div id="links">
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About Me</a>
+                  </div>
+                </div>
+                <div id="photoArea">&nbsp;</div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+          <div class="content">©2022-2023 Ethan Borg, all rights reserved.</div>
+        </div>
       </div>
     </div>
   </body>
