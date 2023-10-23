@@ -1,3 +1,27 @@
+/*
+    FONTS
+
+@font-face{
+    font-family: 'Titillium';
+    src: url('titillium700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Nunito';
+    src: url('nunito300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Nunito';
+    src: url('nunito400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+*/
+
+
 html, body{
     border: none;
     margin: 0;
@@ -18,7 +42,24 @@ a{
     cursor: pointer;
 }
 
+.clickOverlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(0,0,0,0);
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0;
+}
+
 #footer{
+    margin-top: 50vh;
     padding: 2em 0;
     background-color: #000000;
     box-shadow: 0 0 1em rgba(0,0,0,0.6);
@@ -106,6 +147,11 @@ div.content{
     margin-top: 4em;
     width: 100%;
     transform-origin: 50vw 50vh;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
 }
 
 #introduction{
@@ -157,7 +203,6 @@ img.photoArea{
 }
 
 #outerGradient{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(1rem);
     padding: 1.6em 0 10em 0;
     display: block;
@@ -191,10 +236,98 @@ img.photo{
     border: 0.2em solid #FFFFFF;
 }
 
+div.projectlist{
+    width: 100%;
+    text-align: center;
+}
+
+div.projectEntry{
+    height: 22em;
+    position: relative;
+    overflow: hidden;
+}
+
+div.projectlist div.stripe{
+    display: inline-block;
+    margin: 0 0.3em;
+    padding: 0.4em 0;
+    width: 45%;
+}
+
+div.stripe{
+    display: block;
+    width: 100%;
+    clear: both;
+    position: relative;
+}
+
+div.details{
+    text-align: left;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5em;
+    max-height: 20em;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+div.description{
+    display: block;
+    width: 100%;
+}
+
+span.date{
+    margin-left: 1em;
+    float: right;
+    color: #AAAAAA;
+}
+
+div.projectEntry:hover > div.background{
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+}
+
+div.background{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #404040;
+    background-size: cover;
+    background-position: center center;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+div.projectEntry > div.details > h2{
+    margin: 0 0 0.2em 0;
+    font-size: 1.7em;
+}
+
+h2{
+    font-size: 2.1em;
+}
+
+h2 a{
+    text-decoration: none;
+}
 
 h4{
     margin-top: 1em;
     font-size: 1.7em;
+}
+
+h1,h2,h3,h4{
     font-family: 'Titillium', sans-serif;
     color: #FFFFFF;
     font-weight: 700;
