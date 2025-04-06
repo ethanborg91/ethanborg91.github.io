@@ -50,7 +50,7 @@ export default function Projects() {
                     </div>
                     <div className={styles.clear}>&nbsp;</div>
                   </div>
-                  <a className={styles.clickOverlay} href="todoList.html">
+                  <a className={styles.clickOverlay} href="/projects/todo-list">
                     &nbsp;
                   </a>
                 </div>

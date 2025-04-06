@@ -1,48 +1,64 @@
+"use client";
+
 import styles from "./main.module.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import {
+  FaMapMarkerAlt,
+  FaDownload,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 export default function Home() {
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/Images/Ethan Borg Resume.pdf";
+    link.download = "Ethan Borg Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <div className={styles.body}>
-      <Header />
-      <div className={styles.page}>
-        <div className={styles.fragment}>
-          <div className={styles.block}>
-            <div className={styles.outerGradient}>
-              <div className={styles.content}>
-                <div className={styles.innerGradient}>
-                  <div className={styles.introduction}>
-                    <div>&nbsp;</div>
-                    <div className={styles.opener}>Ethan Borg's Website</div>
-                    <div className={styles.about}>
-                      Hello! I am Ethan Borg, a fourth year computer science
-                      student at The University of Western Ontario.
-                      <br />
-                      This is the personal website I have created for my work
-                      portfolio and personal life.
-                      <br />
-                      This webiste is my first attempt at front-end development
-                      and was created using HTML and CSS.
-                      <br />
-                      Thank you for visiting and taking the time to read about
-                      me!
-                    </div>
-                    <div className={styles.links}>
-                      <a href="/projects">Projects</a>
-                      <a href="about.html">About Me</a>
-                    </div>
-                  </div>
-                  <img
-                    src="Images/ProfessionalPic.jpg"
-                    className={styles.photoArea}
-                  />
-                  <div className={styles.clear}></div>
-                </div>
+    <div className={styles.root}>
+      <div className={styles.wrapper}>
+        <div className={styles.page}>
+          <div className={styles.content}>
+            <div className={styles.intro}>
+              <h2>Ethan Borg</h2>
+              <h3>
+                Software Engineer
+                <br />
+                Computer Geek
+              </h3>
+              <div className={styles.location}>
+                <FaMapMarkerAlt />
+                <p>Ontario, Canada</p>
+              </div>
+              <div className={styles.links}>
+                <button onClick={downloadResume}>
+                  <FaDownload />
+                  <span>Resume</span>
+                </button>
+                <a
+                  href="https://www.linkedin.com/in/ethan-borg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin size={28} />
+                </a>
+                <a
+                  href="https://github.com/ethanborg91"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub size={28} />
+                </a>
               </div>
             </div>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </div>
     </div>

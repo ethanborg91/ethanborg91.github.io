@@ -1,15 +1,11 @@
 .footer{
-    margin-top: 50vh;
-    padding: 2em 0;
-    background-color: #000000;
-    box-shadow: 0 0 1em rgba(0,0,0,0.6);
+    padding: 2rem 0;
+    background-color: transparent;
     font-weight: 400;
     width: 100%;
-    max-width: 70em;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 48rem;
 }
 
 .content{
@@ -18,5 +14,10 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    justify-content: space-between;
 }
 
+.icons{
+    display: flex;
+    gap: 1rem;
+}
