@@ -2,12 +2,11 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next export", 
     "preview": "npx serve out"    
   },
   "dependencies": {
