@@ -1,6 +1,4 @@
 .root{
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     position: fixed;
     height: 100%;
@@ -11,17 +9,29 @@
 
 .wrapper{
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100vh;
     background-color: #181922;
     z-index: -2;
     position: fixed;
 }
 
+.wrapper::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
 .page {
     width: 100%;
     height: 100%;
-    overflow-x: scroll;
     display: flex;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .content{
@@ -108,6 +118,146 @@
 
 .links a{
     margin-left: 0.75rem;
+}
+
+.experience{
+    padding-top: 4rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.experienceTabs{
+    padding: .25rem;
+    outline: none;
+    background-color: rgb(148 163 184);
+    border-radius: 0.5rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 2.25rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.experienceTabs button{
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    padding: .25rem .75rem
+}
+
+.activeTab{
+    background-color: #1a1a1a;
+    border-radius: 0.25rem;
+}
+
+.experienceContent{
+    border: white 1px solid;
+    border-radius: .75rem;
+    margin-top: 0.5rem;
+    transition-duration: .5s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    --tw-translate-x: 1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.row{
+    border-left: 1px solid white;
+    margin-left: 2.5rem;
+    list-style: none;
+}
+
+.rowContent{
+    padding: 1rem 0;
+    margin-left: 2.5rem;
+    position: relative;
+}
+
+.imageContainer{
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -4rem;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    overflow: hidden;
+}
+
+.rowImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.rowDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .25rem;
+}
+
+.rowDetails time{
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
+.rowDetails h2{
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.1;
+}
+
+.rowDetails p{
+    line-height: 1;
+    font-size: .9rem;
+}
+
+.skills{
+    margin-top: 2rem;
+}
+
+.skills span{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+.skillsList{
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+}
+
+@media (min-width: 640px){
+    .skillsList{
+        margin-top: 2rem;
+    }
+}
+
+.eachSkill{
+    font-size: .8rem;
+    line-height: 1rem;
+    padding: .25rem .75rem;
+    border: 1px solid #ffffff20;
+    background-color: rgba(148, 163, 184, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: .25rem;
+    margin-bottom: .25rem;
+    width: fit-content;
+    border-radius: .3rem;
+    height: 2rem;
 }
 
 .clickOverlay{
