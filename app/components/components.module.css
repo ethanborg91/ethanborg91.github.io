@@ -1,6 +1,5 @@
 .footer{
     padding: 2rem 0;
-    background-color: transparent;
     font-weight: 400;
     width: 100%;
     display: flex;
@@ -8,11 +7,14 @@
     max-width: 48rem;
 }
 
+.footerLine{
+    border-color: #d1d5db33;
+    width: 100%;
+    margin: 1rem 0;
+}
+
 .content{
     width: 100%;
-    max-width: 70em;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     justify-content: space-between;
 }
