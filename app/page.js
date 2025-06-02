@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "./main.module.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Projects from "./projects/projects";
 import {
   FaMapMarkerAlt,
   FaDownload,
@@ -99,7 +100,7 @@ export default function Home() {
     "Jira",
     "PostgreSQL",
     "Git",
-    "REST API's",
+    "REST APIs",
   ];
 
   return (
@@ -172,6 +173,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
+            <Projects />
             <Footer />
           </div>
         </div>

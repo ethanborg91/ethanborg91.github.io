@@ -41,21 +41,12 @@
     width: 100%;
     height: 100%;
     justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
     padding: 2.5rem;
 }
 
 @media (min-width: 640px){
     .content{
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-}
-
-@media (min-width: 1024px){
-    .content{
-        padding-bottom: 10rem;
+        padding: 5rem 2rem;
     }
 }
 
@@ -220,7 +211,7 @@
 }
 
 .skills{
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .skills span{
