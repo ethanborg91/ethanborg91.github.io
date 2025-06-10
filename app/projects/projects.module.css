@@ -1,0 +1,65 @@
+.projects {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* 2‑col on ≥640 px */
+  gap: 2rem;
+  width: 100%;
+}
+
+.heading {
+  grid-column: 1 / -1;     
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+.projectCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #fff;
+  transition: transform 0.25s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+}
+
+.background {
+  height: 11.5rem;
+  background-size: cover;
+  background-position: center;
+  border-bottom: black 1px solid;
+}
+
+.websitePic  { background-image: url("/Images/WebsiteCover4.png"); }
+.graphPic  { background-image: url("/Images/graph.jpg"); }
+.todoPic     { background-image: url("/Images/TodoList.jpg"); }
+.textGamePic { background-image: url("/Images/textgame.jpg"); }
+
+.details {
+  padding: 1rem 1.25rem 1.5rem;
+  color: #464444;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #464444;
+}
+
+.title {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.description {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.clickOverlay {
+  position: absolute;
+  inset: 0;       
+  z-index: 2;
+  text-indent: -9999px;
+}
