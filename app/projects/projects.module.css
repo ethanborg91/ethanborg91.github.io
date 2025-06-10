@@ -29,9 +29,10 @@
   height: 11.5rem;
   background-size: cover;
   background-position: center;
+  border-bottom: black 1px solid;
 }
 
-.websitePic  { background-image: url("/Images/WebsitePic.png"); }
+.websitePic  { background-image: url("/Images/WebsiteCover4.png"); }
 .graphPic  { background-image: url("/Images/graph.jpg"); }
 .todoPic     { background-image: url("/Images/TodoList.jpg"); }
 .textGamePic { background-image: url("/Images/textgame.jpg"); }
