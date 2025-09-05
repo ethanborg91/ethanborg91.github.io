@@ -88,7 +88,7 @@ export default function Home() {
   const skills = [
     "JavaScript",
     "React",
-    "Next.JS",
+    "NextJS",
     "HTML",
     "CSS",
     "Java",
