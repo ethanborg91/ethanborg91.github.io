@@ -1,13 +1,16 @@
 .projects {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* 2‑col on ≥640 px */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(320px, 1fr)
+  ); /* 2‑col on ≥640 px */
   gap: 2rem;
   width: 100%;
 }
 
 .heading {
-  grid-column: 1 / -1;     
+  grid-column: 1 / -1;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 2.5rem;
@@ -32,10 +35,21 @@
   border-bottom: black 1px solid;
 }
 
-.websitePic  { background-image: url("/Images/WebsiteCover4.png"); }
-.graphPic  { background-image: url("/Images/graph.jpg"); }
-.todoPic     { background-image: url("/Images/TodoList.jpg"); }
-.textGamePic { background-image: url("/Images/textgame.jpg"); }
+.websitePic {
+  background-image: url("/Images/WebsiteCover4.png");
+}
+.nhlPic {
+  background-image: url("/Images/NHL_Predictor.png");
+}
+.graphPic {
+  background-image: url("/Images/graph.jpg");
+}
+.todoPic {
+  background-image: url("/Images/TodoList.jpg");
+}
+.textGamePic {
+  background-image: url("/Images/textgame.jpg");
+}
 
 .details {
   padding: 1rem 1.25rem 1.5rem;
@@ -59,7 +73,7 @@
 
 .clickOverlay {
   position: absolute;
-  inset: 0;       
+  inset: 0;
   z-index: 2;
   text-indent: -9999px;
 }

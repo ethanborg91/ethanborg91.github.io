@@ -113,7 +113,7 @@ export default function Home() {
               <h3>
                 Software Engineer
                 <br />
-                Computer Geek
+                Lifelong Learner
               </h3>
               <div className={styles.location}>
                 <FaMapMarkerAlt size={20} />

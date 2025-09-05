@@ -35,8 +35,16 @@ export default function Projects() {
       />
 
       <ProjectCard
+        link="https://nhl-2025-ml-predictor.vercel.app/"
+        date="Sep 2025"
+        title="NHL Predictor"
+        description="Predict upcoming NHL season stadings with Random Forest Classifier ML model"
+        bgClass={styles.nhlPic}
+      />
+
+      <ProjectCard
         link="https://github.com/ethanborg91/gitmetrics"
-        date="In Progress"
+        date="Aug 2025"
         title="GitMetrics"
         description="Platform that monitors your Git datas and presents valuable analytics"
         bgClass={styles.graphPic}
