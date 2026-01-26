@@ -50,6 +50,9 @@
 .textGamePic {
   background-image: url("/Images/textgame.jpg");
 }
+.homelabPic {
+  background-image: url("/Images/Bays-Server.jpeg");
+}
 
 .details {
   padding: 1rem 1.25rem 1.5rem;

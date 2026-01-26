@@ -6,7 +6,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <hr className={styles.footerLine} />
       <div className={styles.content}>
-        <p>© 2022-2025 Ethan Borg.</p>
+        <p>© 2022-{new Date().getFullYear()} Ethan Borg.</p>
         <div className={styles.icons}>
           <a
             href="https://www.linkedin.com/in/ethan-borg/"

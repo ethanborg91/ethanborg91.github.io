@@ -1,6 +1,7 @@
+import Link from "next/link";
 import styles from "./projects.module.css";
 
-function ProjectCard({ link, date, title, description, bgClass }) {
+function ProjectCard({ link, date, title, description, bgClass, isInternal }) {
   return (
     <article className={styles.projectCard}>
       <div className={`${styles.background} ${bgClass}`} />
@@ -10,20 +11,28 @@ function ProjectCard({ link, date, title, description, bgClass }) {
         <p className={styles.description}>{description}</p>
       </div>
 
-      <a
-        className={styles.clickOverlay}
-        href={link}
-        aria-label={title}
-        target="_blank"
-        rel="noopener noreferrer"
-      />
+      {isInternal ? (
+        <Link
+          className={styles.clickOverlay}
+          href={link}
+          aria-label={title}
+        />
+      ) : (
+        <a
+          className={styles.clickOverlay}
+          href={link}
+          aria-label={title}
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      )}
     </article>
   );
 }
 
 export default function Projects() {
   return (
-    <section className={styles.projects}>
+    <section id="projects" className={styles.projects}>
       <h2 className={styles.heading}>Projects</h2>
 
       <ProjectCard
@@ -32,6 +41,15 @@ export default function Projects() {
         title="ethanborg91.github.io"
         description="This site"
         bgClass={styles.websitePic}
+      />
+
+      <ProjectCard
+        link="/projects/homelab"
+        date="Ongoing"
+        title="Homelab"
+        description="Self-hosted infrastructure for learning and experimentation"
+        bgClass={styles.homelabPic}
+        isInternal
       />
 
       <ProjectCard
